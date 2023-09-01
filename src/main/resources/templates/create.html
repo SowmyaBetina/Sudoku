@@ -1,0 +1,62 @@
+<!--
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Sudoku Puzzle</title>
+</head>
+<body>
+    <p>Create Sudoku Puzzle</p>
+    <form th:action="@{/create}" th:object="${sudoku}" method="post">
+        <label for="puzzle">Enter Sudoku values</label>
+        <textarea id="puzzle" name="puzzle" th:field="*{puzzle}" rows="9" cols="9" required></textarea>
+        <button type="submit">click to create Sudoku !</button>
+    </form>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Sudoku Puzzle</title>
+</head>
+<body>
+    <h1>Create Sudoku Puzzle</h1>
+    <form th:action="@{/create}" th:object="${sudoku}" method="post">
+        <table>
+            <tbody>
+                <tr th:each="row, rowStat : *{puzzle}">
+                    <td th:each="cell, colStat : *{row}">
+                        <input type="number" th:field="*{puzzle[__${rowStat.index}__][__${colStat.index}__]}" min="1" max="9" required/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit">Create Puzzle</button>
+    </form>
+</body>
+</html>
+-->
+<!--
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Sudoku Puzzle</title>
+</head>
+<body>
+    <h1>Create Sudoku Puzzle</h1>
+    <form th:action="@{/create}" th:object="${sudoku}" method="post">
+        <table>
+            <tbody>
+                <tr th:each="row, rowStat : *{puzzle}">
+                    <td th:each="cell, colStat : *{row}">
+                        <input type="number" th:field="*{puzzle[__${rowStat.index}__][__${colStat.index}__]}" min="1" max="9" required/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit">Create Puzzle</button>
+    </form>
+</body>
+</html>
+-->

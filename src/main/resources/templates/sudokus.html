@@ -1,0 +1,18 @@
+<!--
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sudoku Puzzle List</title>
+</head>
+<body>
+    <p>Sudoku games</p>
+    <ul>
+        <li th:each="puzzle : ${puzzles}">
+            <span th:text="${puzzle.id}">Sudoku number</span>
+            <a th:href="@{/solve/{id}(id=${puzzle.id})}">Solve</a>
+        </li>
+    </ul>
+    <a href="/create">Click to create new Sudoku!</a>
+</body>
+</html>
+-->
